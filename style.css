@@ -1,0 +1,63 @@
+/* EasyRow legal & support pages — "quiet ledger" palette from the app. */
+:root {
+  --ground: #f4f4f1;
+  --surface: #ffffff;
+  --ink: #141615;
+  --ink-soft: #3f4441;
+  --ink-muted: #5f6461;
+  --line: #e7e6e1;
+  --brand: #0b5d4f;
+  --brand-soft: #e4efeb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #121413;
+    --surface: #1a1d1b;
+    --ink: #eceeea;
+    --ink-soft: #c9ccc8;
+    --ink-muted: #9da29e;
+    --line: #2b2f2d;
+    --brand: #6fc2ad;
+    --brand-soft: #1d3530;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font: 16px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", "Helvetica Neue", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+main {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 40px 20px 64px;
+}
+.brand {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--brand-soft);
+  color: var(--brand);
+  font-weight: 650;
+  font-size: 14px;
+  text-decoration: none;
+}
+h1 { margin: 20px 0 4px; font-size: 32px; line-height: 1.2; letter-spacing: -0.6px; }
+h2 { margin: 32px 0 8px; font-size: 19px; letter-spacing: -0.2px; }
+.meta { margin: 0 0 24px; color: var(--ink-muted); font-size: 14px; }
+.lead {
+  padding: 16px 18px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--surface);
+  font-size: 17px;
+}
+p, li { color: var(--ink-soft); }
+ul { padding-left: 20px; }
+li { margin: 6px 0; }
+a { color: var(--brand); }
+code { font-size: 14px; padding: 1px 5px; border-radius: 6px; background: var(--brand-soft); }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; }
